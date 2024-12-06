@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+:root {
+    font-size: 16px;
+    transition: all 1s ease;
+}
+
+#main {
+    background-color: rgb(255, 255, 255);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#materias {
+
+    background-color: rgb(51, 53, 56);
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.materia {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-top: 1px white solid;
+}
+
+.materia .nota {
+    background-color: rgb(40, 86, 212);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+}
+
+.nomedm {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: white;
+}
+
+.nomedm .n {
+    text-transform: uppercase;
+    
+}
