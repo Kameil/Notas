@@ -3,6 +3,7 @@ const materias = ["Biologia", "Fisica", "Quimica", "Filosofia", "Geografia", "Hi
 for(materiaNome of materias) {
    const materia = $("<div>")
    materia.addClass("materia")
+   materia.attr("id", String(materiaNome).toLowerCase())
    const nota = $("<div>")
    nota.addClass("nota")
    const notaN = $("<p>")
@@ -23,3 +24,6 @@ for(materiaNome of materias) {
    const materias = $("#materias")
    materias.append(materia)
 }
+
+const materiadeteste = $("#1")
+materiadeteste.remove()
