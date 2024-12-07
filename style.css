@@ -24,13 +24,14 @@
     display: flex;
     width: 100%;
     max-width: 700px;
-    padding-inline: 20px;
+    padding-inline: 10px;
     padding-block: 10px;
     align-items: center;
-    background-color: rgb(51, 52, 54);;
+    background-color: rgb(20, 17, 24);
+    border-bottom: gray 1px solid;
 }
 #titulo {
-    margin-left: 90px;
+    margin-left: 30px;
     color: white;
     font-size: 1.5rem;
 }
@@ -49,25 +50,28 @@
 
 #materias {
 
-    background-color: rgb(51, 53, 56);
+    background-color: rgb(20, 17, 24);
     width: 100%;
     max-width: 700px;
     max-height: 100%;
-    padding: 10px;
     overflow-y: scroll;
 }
 .materia {
     display: flex;
     align-items: center;
     height: 80px;
-    border-top: 1px white solid;
+    border-bottom: 1px gray solid;
     padding-right: 10px;
+    padding-inline: 5px;
+    gap: 5px;
 }
 
 .materia .nota {
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 27px;
+    height: 27px;
+    font-size: 0.8rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,10 +79,10 @@
     color: white;
 }
 .nota-baixa {
-    background-color: red;
+    background-color: rgb(244, 66, 52);
 }
 .nota-boa {
-    background-color: rgb(40, 86, 212);
+    background-color: rgb(33, 150, 243);
 }
 .materia .edit {
     background-color: rgb(91, 91, 92);
@@ -103,6 +107,7 @@
     align-items: start;
     justify-content: center;
     color: white;
+    gap: 3px;
 }
 
 .nomedm .n {
