@@ -11,9 +11,10 @@
 <body>
     <div id="inputnotamain">
         <div id="inpmateria">
-            <input type="number" placeholder="Nota" id="altnota">
+            <form id="mudarbagulho" name="mudarbagulho"></form>
+            <input type="number" placeholder="Nota" id="altnota" min="0", max="10" form="mudarbagulho" required>
             <div>
-                <button class="inpbotao" id="salvar">Salvar</button>
+                <button class="inpbotao" id="salvar" form="mudarbagulho" type="submit">Salvar</button>
                 <button class="inpbotao" id="cancelar">Cancelar</button>
             </div>
          </div>

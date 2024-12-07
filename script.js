@@ -84,12 +84,12 @@ $("#cancelar").click(() => {
    $("#altnota").val(null)
 })
 
-$("#salvar").click((event) => {
+$("#mudarbagulho").submit((event) => {
    const altnota = $("#altnota");
    if (altnota.val() !== "") {
        const nota = parseFloat(altnota.val()); 
        if (nota <= 10 && nota >= 0) { 
-           const materia = $(event.currentTarget).attr("materia");
+           const materia = $("#salvar").attr("materia");
            let Notas = JSON.parse(localStorage.getItem("Notas")) || {}; 
            Notas[materia] = nota;
            localStorage.setItem("Notas", JSON.stringify(Notas));
