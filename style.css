@@ -20,6 +20,32 @@
     justify-content: center;
 }
 
+#footer {
+    display: flex;
+    width: 100%;
+    padding-inline: 20px;
+    padding-block: 10px;
+    align-items: center;
+    background-color: rgb(51, 52, 54);;
+}
+#titulo {
+    margin-left: 100px;
+    color: white;
+    font-size: 1.5rem;
+}
+#menu {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#menu > span {
+    font-size: 30px;
+    color: white;
+}
+
 #materias {
 
     background-color: rgb(51, 53, 56);
