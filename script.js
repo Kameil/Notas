@@ -21,6 +21,11 @@ for(materiaNome of materias) {
    nomedm.append(nomeN)
    nomedm.append(nomeM)
    materia.append(nomedm)
+   const edit = $("<div>")
+   edit.addClass("edit")
+   edit.html('<span class="material-symbols-outlined">edit</span>')
+   materia.append(edit)
+
    const materias = $("#materias")
    materias.append(materia)
 }
@@ -29,3 +34,7 @@ $("#main").slideDown(1000)
 
 const materiadeteste = $("#1")
 materiadeteste.remove()
+
+$(".materia").mouseover(() => {
+
+})

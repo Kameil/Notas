@@ -34,6 +34,7 @@
     align-items: center;
     height: 80px;
     border-top: 1px white solid;
+    padding-right: 10px;
 }
 
 .materia .nota {
@@ -46,6 +47,18 @@
     justify-content: center;
     margin: 10px;
     color: white;
+}
+.materia .edit {
+    background-color: rgb(91, 91, 92);
+    color: rgb(189, 188, 188);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .nomedm {
