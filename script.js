@@ -10,6 +10,7 @@ for(materiaNome of materias) {
    notaN.text("7,0")
    nota.append(notaN)
    materia.append(nota)
+
    const nomedm = $("<div>")
    nomedm.addClass("nomedm")
    const nomeN = $("<p>")
@@ -21,8 +22,10 @@ for(materiaNome of materias) {
    nomedm.append(nomeN)
    nomedm.append(nomeM)
    materia.append(nomedm)
+
    const edit = $("<div>")
    edit.addClass("edit")
+   edit.css("display", "none")
    edit.html('<span class="material-symbols-outlined">edit</span>')
    materia.append(edit)
 
@@ -35,6 +38,8 @@ $("#main").slideDown(1000)
 const materiadeteste = $("#1")
 materiadeteste.remove()
 
-$(".materia").mouseover(() => {
-
+$(".materia").mouseover((event) => {
+    $(event.currentTarget).find(".edit").show();
+}).mouseout((event) => {
+   $(event.currentTarget).find(".edit").hide()
 })

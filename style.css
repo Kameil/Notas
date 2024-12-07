@@ -59,6 +59,10 @@
     margin-left: auto;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.materia .edit:hover {
+    opacity: 0.6;
 }
 
 .nomedm {
