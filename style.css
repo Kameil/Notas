@@ -103,3 +103,54 @@
     text-transform: uppercase;
     
 }
+
+#inputnotamain {
+    position: fixed;
+    height: 100dvh;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+#inpmateria {
+    background-color: rgba(248, 252, 253, 0.7);
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-block:50px;
+    border-radius: 20px;
+}
+
+.inpbotao {
+    background-color: rgb(27, 192, 91);
+    height: 30px;
+    padding-inline: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 3px 3px 10px black;
+}
+
+#cancelar {
+    background-color: rgb(231, 62, 62);
+}
+
+.inpbotao:hover {
+    opacity: 0.8;
+}
+
+#altnota {
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
