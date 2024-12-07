@@ -56,7 +56,7 @@ for(materiaNome of materias) {
    materias.append(materia)
 }
 
-$("#main").slideDown(1000)
+$("#main").slideDown(500)
 
 const materiadeteste = $("#1")
 materiadeteste.remove()
