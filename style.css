@@ -64,7 +64,6 @@
 }
 
 .materia .nota {
-    background-color: rgb(40, 86, 212);
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -73,6 +72,12 @@
     justify-content: center;
     margin: 10px;
     color: white;
+}
+.nota-baixa {
+    background-color: red;
+}
+.nota-boa {
+    background-color: rgb(40, 86, 212);
 }
 .materia .edit {
     background-color: rgb(91, 91, 92);

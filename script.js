@@ -22,7 +22,14 @@ for(materiaNome of materias) {
    const nota = $("<div>")
    nota.addClass("nota")
    const notaN = $("<p>")
-   notaN.text("7,0")
+   let notavalue = Notas[String(materiaNome).toLowerCase().replaceAll(" ", "_")]
+   if (parseFloat(notavalue) < 6) {
+      nota.addClass("nota-baixa")
+   }else{
+      nota.addClass("nota-boa")
+   }
+
+   notaN.text(notavalue)
    nota.append(notaN)
    materia.append(nota)
 
@@ -76,3 +83,22 @@ $("#cancelar").click(() => {
    inputnotamain.fadeOut()
    $("#altnota").val(null)
 })
+
+$("#salvar").click((event) => {
+   const altnota = $("#altnota");
+   if (altnota.val() !== "") {
+       const nota = parseFloat(altnota.val()); 
+       if (nota <= 10) { 
+           const materia = $(event.currentTarget).attr("materia");
+           let Notas = JSON.parse(localStorage.getItem("Notas")) || {}; 
+           Notas[materia] = nota;
+           localStorage.setItem("Notas", JSON.stringify(Notas));
+           console.log(materia + ": " + nota);
+           window.location.reload()
+       } else {
+           console.error("A nota deve ser menor ou igual a 10.");
+       }
+   } else {
+       console.error("O campo de nota está vazio.");
+   }
+});
