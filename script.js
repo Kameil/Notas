@@ -132,6 +132,7 @@ $(document).ready(function () {
                 clearInterval(picaintervalo); // Para o piscar
                 materiaDiv.css("background-color", originalBgColor); // Retorna à cor original
             }, 2500);
+            history.replaceState(null, document.title, window.location.pathname + window.location.search)
    }
 });
 
