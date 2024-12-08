@@ -11,6 +11,10 @@
     transition: all 1s ease;
 }
 
+body {
+    background-color: black;
+}
+
 #main {
     background-color: black;
     height: 100dvh;

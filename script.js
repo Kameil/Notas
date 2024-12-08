@@ -56,7 +56,7 @@ for(materiaNome of materias) {
    materias.append(materia)
 }
 
-$("#main").slideDown(200)
+$("#main").fadeIn(300)
 
 const materiadeteste = $("#1")
 materiadeteste.remove()
