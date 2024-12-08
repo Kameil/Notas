@@ -56,7 +56,7 @@ for(materiaNome of materias) {
    materias.append(materia)
 }
 
-$("#main").slideDown(500)
+$("#main").slideDown(200)
 
 const materiadeteste = $("#1")
 materiadeteste.remove()
@@ -85,6 +85,7 @@ $("#cancelar").click(() => {
 })
 
 $("#mudarbagulho").submit((event) => {
+   event.preventDefault()
    const altnota = $("#altnota");
    if (altnota.val() !== "") {
        const nota = parseFloat(altnota.val()); 
@@ -94,11 +95,42 @@ $("#mudarbagulho").submit((event) => {
            Notas[materia] = nota;
            localStorage.setItem("Notas", JSON.stringify(Notas));
            console.log(materia + ": " + nota);
-           window.location.reload()
+           window.location.hash = materia
+           setTimeout(() => {
+            window.location.reload(true) 
+           }, 50);
+           
+
        } else {
            console.error("A nota deve ser menor ou igual a 10.");
        }
    } else {
        console.error("O campo de nota está vazio.");
+   }
+});
+
+
+$(document).ready(function () {
+   const hash = document.location.hash
+   if (hash){
+      const materiaDiv = $(hash)
+      $('#materias').animate({
+         scrollTop: materiaDiv.offset().top - $('#materias').offset().top + $('#materias').scrollTop() // Ajuste para rolar no contêiner
+     }, 1000);
+     let originalBgColor = materiaDiv.css("background-color");
+            let tapiscando = false; 
+
+            let picaintervalo = setInterval(() => {
+                if (tapiscando) {
+                    materiaDiv.css("background-color", originalBgColor);
+                } else {
+                    materiaDiv.css("background-color", "rgba(255, 255, 0, 0.5)");
+                }
+                tapiscando = !tapiscando;
+            }, 500); 
+            setTimeout(() => {
+                clearInterval(picaintervalo); // Para o piscar
+                materiaDiv.css("background-color", originalBgColor); // Retorna à cor original
+            }, 2500);
    }
 });
