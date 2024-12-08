@@ -124,9 +124,10 @@
     align-items: center;
     justify-content: center;
     display: none;
+    
 }
 #inpmateria {
-    background-color: rgba(248, 252, 253, 0.7);
+    background-color: rgb(20, 17, 24);
     width: 300px;
     height: 200px;
     display: flex;
@@ -135,6 +136,7 @@
     justify-content: space-between;
     padding-block:50px;
     border-radius: 20px;
+    box-shadow:  1px 1px 5px rgb(69, 71, 73)
 }
 
 .inpbotao {
@@ -147,21 +149,36 @@
     transition: all 0.3s ease;
     color: white;
     box-shadow: 3px 3px 10px black;
+    transition: all 0.3s ease;
 }
 
 #cancelar {
     background-color: rgb(231, 62, 62);
 }
 
+#cancelar:hover{
+    box-shadow: 1px 1px 5px red;
+}
+
+#salvar:hover {
+    box-shadow: 1px 1px 5px green;
+}
 .inpbotao:hover {
     opacity: 0.8;
 }
 
 #altnota {
+    background-color: black;
+    color: white;
     outline: none;
-    border: none;
-    width: 60px;
-    height: 40px;
+    border: 1px solid black;
+    padding: 10px;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px gray;
+    transition: all 0.3s ease;
+}
+#altnota:focus {
+    border: 1px solid rgb(37, 82, 110);
+    box-shadow: 1px 1px 5px rgb(37, 82, 110);
 }
