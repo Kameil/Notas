@@ -28,8 +28,8 @@ for(materiaNome of materias) {
    }else{
       nota.addClass("nota-boa")
    }
-
-   notaN.text(notavalue)
+   notavaluecomvirgula = String(notavalue).replace(".", ",") 
+   notaN.text(notavaluecomvirgula)
    nota.append(notaN)
    materia.append(nota)
 
@@ -134,3 +134,21 @@ $(document).ready(function () {
             }, 2500);
    }
 });
+
+$("#altnota").on("input", (event) => {
+   event.preventDefault()
+   altnota = $(event.currentTarget)
+   if (altnota.val() <= 10 && altnota.val() >= 0) {
+      const inputexp = $("#inputexp")
+      if (String(altnota.val()).length <= 3) {
+         inputexp.text(String(altnota.val()).replace(".", ","))
+      }
+      
+      inputexp.removeClass("nota-boa")
+      inputexp.addClass("nota-baixa")
+      if (altnota.val() >= 6){
+         inputexp.removeClass("nota-baixa")
+         inputexp.addClass("nota-boa")
+      }
+   }
+})
