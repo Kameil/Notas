@@ -127,7 +127,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+
     
 }
 #inpmateria {
@@ -137,10 +137,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 30px;
+    justify-content: space-around;
     border-radius: 20px;
     box-shadow:  1px 1px 5px rgb(69, 71, 73)
+}
+
+#bodydinput {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 14px;
+
 }
 
 .inpbotao {
