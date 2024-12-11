@@ -154,8 +154,12 @@ body {
 
 }
 
+#inputexp {
+    margin-top: 0px;
+}
+
 .inpbotao {
-    background-color: rgb(27, 192, 91);
+    background-color: rgb(56, 64, 71);
     height: 30px;
     padding-inline: 20px;
     border: none;
@@ -197,9 +201,7 @@ body {
     background-color: rgba(128, 128, 128, 0.3);
 }
 
-#salvar:hover {
-    box-shadow: 1px 1px 5px green;
-}
+
 .inpbotao:hover {
     opacity: 0.8;
 }
